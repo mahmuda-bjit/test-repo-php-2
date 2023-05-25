@@ -1,5 +1,5 @@
 <?php
-$DB_host = "localhost";
+$DB_host = "192.168.20.4";
 $DB_user = "root";
 $DB_pass = "";
 $DB_name = "schoolmanagement";

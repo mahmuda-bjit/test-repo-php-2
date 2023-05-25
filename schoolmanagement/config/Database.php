@@ -2,7 +2,7 @@
 class Database {
 	private $_connection;
 	private static $_instance; //The single instance
-	private $_host = "localhost";
+	private $_host = "192.168.20.4";
 	private $_username = "root";
 	private $_password = "";
 	private $_database = "schoolmanagement";
