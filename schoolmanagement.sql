@@ -46,7 +46,6 @@ CREATE TABLE `cities` (
 --
 
 
-
 -- --------------------------------------------------------
 
 --
@@ -95,8 +94,8 @@ CREATE TABLE `registration` (
 -- Dumping data for table `registration`
 --
 
-INSERT INTO `registration` (`course`, `subject`, `fname`, `mname`, `lname`, `gender`, `gname`, `ocp`, `income`, `category`, `pchal`, `nationality`, `mobno`, `emailid`, `country`, `state`, `dist`, `padd`, `cadd`, `board`, `roll`, `pyear`, `sub`, `marks`, `fmarks`, `board1`, `roll1`, `yop1`, `sub1`, `session`, `regdate`, `marks1`, `fmarks1`, `regno`, `id`) VALUES
-('13', 'OPERATING SYSTEM+DATA STRUCTURE+ NETWOKING', 'Anuj', 'Kumar', 'Singh', 'Male', 'IT Service', 'Male', '500000', 'general', 'general', 'Indian', '1234567890', 'phpgurukulofficial@gmail.com', '101', '4', '', 'Mayur Vihar', 'Mayur Vihar', '10 UP Board', '12 UP Board', '123456', '654332', 2010, 2012, 'Hindi', 'English', '80', '60', '2010-2011', '2019-05-27 17:11:59', '100', '100', '1307692170', 3);
+INSERT INTO `registration` (`course`, `subject`, `fname`, `mname`, `lname`, `gender`, `gname`, `ocp`, `income`, `category`        , `pchal`, `nationality`, `mobno`, `emailid`, `country`, `state`, `dist`, `padd`, `cadd`, `board`, `roll`, `pyear`, `sub`,         `marks`, `fmarks`, `board1`, `roll1`, `yop1`, `sub1`, `session`, `regdate`, `marks1`, `fmarks1`, `regno`, `id`) VALUES
+('13', 'OPERATING SYSTEM+DATA STRUCTURE+ NETWOKING', 'Anuj', 'Kumar', 'Singh', 'Male', 'IT Service', 'Male', '500000', 'ge        neral', 'general', 'Indian', '1234567890', 'phpgurukulofficial@gmail.com', '101', '4', '', 'Mayur Vihar', 'Mayur Vihar', '        10 UP Board', '12 UP Board', '123456', '654332', 2010, 2012, 'Hindi', 'English', '80', '60', '2010-2011', '2019-05-27 17:1        1:59', '100', '100', '1307692170', 3);
 
 -- --------------------------------------------------------
 
@@ -155,7 +154,7 @@ CREATE TABLE `subject` (
   `sub1` varchar(250) DEFAULT NULL,
   `sub2` varchar(250) DEFAULT NULL,
   `sub3` varchar(250) DEFAULT NULL,
-  `dt_created` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `dt_created` datetime DEFAULT NULL,
   `update_date` varchar(200) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -165,7 +164,7 @@ CREATE TABLE `subject` (
 
 INSERT INTO `subject` (`subid`, `cshort`, `cfull`, `sub1`, `sub2`, `sub3`, `dt_created`, `update_date`) VALUES
 (3, '8', 'MASTER OF SCIENCE', 'Mathematics', 'Physics', 'Chemistry', '2016-04-16 18:08:27', NULL),
-(6, '10', 'BACHELOR OF TECHNOLOGY', 'Engineering Drawing', 'Computer Programming', 'Computer Science Essentials', '2016-04-16 19:51:43', NULL),
+(6, '10', 'BACHELOR OF TECHNOLOGY', 'Engineering Drawing', 'Computer Programming', 'Computer Science Essentials', '2016-04        -16 19:51:43', NULL),
 (7, '12', 'Bachelor of Arts ', 'Economics', 'History', 'Geography', '2019-05-27 22:34:40', NULL),
 (8, '9', 'BACHELOR OF COMMERCE', 'test1', 'test2', 'test3', '2019-05-27 22:36:36', NULL),
 (9, '13', 'Master of Technology', 'Operating System', 'Data Structure', 'Netwoking', '2019-05-27 22:39:41', '27-05-2019');
@@ -228,9 +227,6 @@ ALTER TABLE `cities`
 
 --
 -- Indexes for table `countries`
---
-ALTER TABLE `countries`
-  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `registration`
@@ -281,8 +277,6 @@ ALTER TABLE `cities`
 --
 -- AUTO_INCREMENT for table `countries`
 --
-ALTER TABLE `countries`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=247;
 
 --
 -- AUTO_INCREMENT for table `registration`
